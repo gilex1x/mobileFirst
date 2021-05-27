@@ -225,3 +225,19 @@ main{
     background-position: center;
     background-repeat: no-repeat;
 }
+
+
+.currenci__table-date, .commission__table-date{
+    width: 190px;
+    height: 30px;
+    margin: 0 auto;
+    margin-top:15px;
+    padding: 8px;
+    border-radius: 8px;
+}
+.currenci__table-date{
+    background-color: var(--soft-orange);
+}
+.commission__table-date{
+    background-color: var(--soft-blue);
+}

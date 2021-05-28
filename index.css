@@ -14,6 +14,7 @@
     --soft-blue: #E7F5FF;
     --warm-black: #201E1C;
     --black: #282623;
+    --text-grey: #808080;
     --grey: #BABABA;
     --off-white: #FAF8F7;
     --white: #FFFFFF;
@@ -240,4 +241,54 @@ main{
 }
 .commission__table-date{
     background-color: var(--soft-blue);
+}
+
+.main-product-detail{
+    /*le ponemos positio:relative para que sea el padre del position absolute del logo*/
+    position: relative;
+    width: 100%;
+    min-width: 320px;
+    height: auto;
+    padding: 20px 10px;
+    background: var(--warm-black);
+}
+
+.main-product-detail__logo{
+    /*Este va a abuscar al primer position relative padre como referencia para su posicion*/
+    position: absolute;
+    width: 40px;
+    height: 25px;
+    top: -10px;
+    /*
+    se mueve al centro pero desde su inicio
+    por lo cual le restamos la mitad de su width para que quede desde el centro
+    de la imagen
+    */
+    left: calc(50% - 20px);
+    background-image: url('./assets/icons/batata.svg');
+}
+
+.main-product-detail__title{
+    width: 90%;
+    min-width: 280px;
+    height: auto;
+    margin: 0 auto;
+    margin-top:50px;
+    text-align: center;
+}
+
+.main-product-detail__title h2{
+    margin-bottom: 20px;
+    font-size: 2.4rem;
+    font-weight: bold;
+    line-height: 2.6rem;
+    color: var(--white);
+}
+
+.main-product-detail__title p{
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    color: var(--text-grey);
 }
